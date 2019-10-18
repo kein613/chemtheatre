@@ -10,10 +10,6 @@ Webkis-plusのChemicalsテーブルを読み込む。
 
 ```python
 webkis = pd.read_table('webkis_chemicals.txt')
-```
-
-
-```python
 webkis[0:5]
 ```
 

@@ -74,9 +74,6 @@ ChemTHEATREのChemicalsテーブルを読み込む。この時，PubChemのカ�
 
 ```python
 chemtheatre = pd.read_table('chemtheatre_chemicals.tsv', dtype = {'PubChem':str})
-```
-
-```python
 chemtheatre[0:5]
 ```
 

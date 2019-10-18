@@ -207,7 +207,8 @@ print(webkis)
     
     [402 rows x 5 columns]
 
-
+ChemTHEATREのchemicalsテーブルを読み込む。
+この時，PubChemのカラムだけ，データ型を文字型にしておく。PubChemIDは整数だが，PubChemIDが付かないレコードがあり，欠損値NaNとして表示される。NaNは浮動小数点型（float）として認識されるので，データ型を整数型には出来ない。
 
 ```python
 chemtheatre = pd.read_table('chemtheatre_chemicals.tsv', dtype = {'PubChem':str})
@@ -472,7 +473,7 @@ print(chemtheatre)
     
     [1056 rows x 11 columns]
 
-
+CAS RNで揃えて（on='CAS'），ChemTHEATREのテーブルをベースに（how='left'）2つのテーブルをマージする。
 
 ```python
 pd.merge(chemtheatre, webkis, on='CAS', how='left')
@@ -2790,12 +2791,13 @@ chemicals_merged
 </div>
 
 
-
+ChemTHEATREにアップロードできるよう，必要なカラムだけを抽出する。
 
 ```python
 chemicals_upload = chemicals_merged.iloc[:, 0:11]
 ```
 
+ChemTHEATREにアップロードするタブ区切り（sep='\t'）ファイルを出力する。この時，行番号は要らないので表示させない（index=False）。
 
 ```python
 chemicals_upload.to_csv('chemicals_link_upload.tsv', sep='\t', index=False)

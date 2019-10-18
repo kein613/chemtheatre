@@ -59,62 +59,7 @@ print(chemtheatre)
     3     CH0000004      CG0003       1,2,3,6,7,8-HexaCDD   
     4     CH0000005      CG0003       1,2,3,7,8,9-HexaCDD   
     5     CH0000006      CG0003    1,2,3,4,6,7,8-HeptaCDD   
-    6     CH0000007      CG0003                   OctaCDD   
-    7     CH0000008      CG0004              2,3,7,8-TCDF   
-    8     CH0000009      CG0004        1,2,3,7,8-PentaCDF   
-    9     CH0000010      CG0004        2,3,4,7,8-PentaCDF   
-    10    CH0000011      CG0004         1,2,3,4,7,8-HxCDF   
-    11    CH0000012      CG0004         1,2,3,6,7,8-HxCDF   
-    12    CH0000013      CG0004         1,2,3,7,8,9-HxCDF   
-    13    CH0000014      CG0004         2,3,4,6,7,8-HxCDF   
-    14    CH0000015      CG0004       1,2,3,4,6,7,8-HpCDF   
-    15    CH0000016      CG0004       1,2,3,4,7,8,9-HpCDF   
-    16    CH0000017      CG0004                   OctaCDF   
-    17    CH0000018      CG0003               Total PCDDs   
-    18    CH0000019      CG0004               Total PCDFs   
-    19    CH0000020      CG0002             Total PCDD/Fs   
-    20    CH0000021      CG0003                PCDDs-TEQs   
-    21    CH0000022      CG0004                PCDFs-TEQs   
-    22    CH0000023      CG0002              PCDD/Fs-TEQs   
-    23    CH0000024      CG0002                Total TEQs   
-    24    CH0000025      CG0014                  o,p'-DDE   
-    25    CH0000026      CG0014                  o,p'-DDD   
-    26    CH0000027      CG0014                  o,p'-DDT   
-    27    CH0000028      CG0014                Σo,p'-DDTs   
-    28    CH0000029      CG0014                  p,p'-DDE   
-    29    CH0000030      CG0014                  p,p'-DDD   
-    ...         ...         ...                       ...   
-    1026  CH0001028      CG0049                Nitenpyram   
-    1027  CH0001029      CG0049               Thiacloprid   
-    1028  CH0001030      CG0049              Thiamethoxam   
-    1029  CH0001031      CG0049                       CPF   
-    1030  CH0001032      CG0049     Desnitro-imidacloprid   
-    1031  CH0001033      CG0049                    IM-2-1   
-    1032  CH0001034      CG0049         Thiacloprid-amide   
-    1033  CH0001035      CG0060                  Fipronil   
-    1034  CH0001036      CG0120               Bromobutide   
-    1035  CH0001037      CG0120              Quinoclamine   
-    1036  CH0001038      CG0120              Pretilachlor   
-    1037  CH0001039      CG0120               Thenylchlor   
-    1038  CH0001040      CG0120                 Mefenacet   
-    1039  CH0001041      CG0060                Buprofezin   
-    1040  CH0001042      CG0048                Fenobucarb   
-    1041  CH0001043      CG0047               Silafluofen   
-    1042  CH0001044      CG0116      2,3-Epoxy-1-propanol   
-    1043  CH0001045      CG0116            Glutaraldehyde   
-    1044  CH0001046      CG0116    2-Methoxyethyl acetate   
-    1045  CH0001047      CG0115  2,4-Dichloronitrobenzene   
-    1046  CH0001048      CG0116         Dicyclohexylamine   
-    1047  CH0001049      CG0115        2,4-Dinitroaniline   
-    1048  CH0001050      CG0116        Dimethyl disulfide   
-    1049  CH0001051      CG0116                1-Naphthol   
-    1050  CH0001052      CG0115            2-Naphthalenol   
-    1051  CH0001053      CG0116           2-Vinylpyridine   
-    1052  CH0001054      CG0116     4-Vinyl-1-cyclohexene   
-    1053  CH0001055      CG0116                  Pyridine   
-    1054  CH0001056      CG0115          3-Methylpyridine   
-    1055  CH0001057      CG0116  Dibutyl phenyl phosphate   
-    
+   
                                                       IUPAC  \
     0                   2,3,7,8-tetrachlorodibenzo-p-dioxin   
     1                 1,2,3,7,8-pentachlorodibenzo-p-dioxin   
@@ -122,62 +67,7 @@ print(chemtheatre)
     3                1,2,3,6,7,8-hexachlorodibenzo-p-dioxin   
     4                1,2,3,7,8,9-hexachlorodibenzo-p-dioxin   
     5             1,2,3,4,6,7,8-heptachlorodibenzo-p-dioxin   
-    6            1,2,3,4,6,7,8,9-octachlorodibenzo-p-dioxin   
-    7                       2,3,7,8-tetrachlorodibenzofuran   
-    8                     1,2,3,7,8-pentachlorodibenzofuran   
-    9                     2,3,4,7,8-pentachlorodibenzofuran   
-    10                   1,2,3,4,7,8-hexachlorodibenzofuran   
-    11                   1,2,3,6,7,8-hexachlorodibenzofuran   
-    12                   1,2,3,7,8,9-hexachlorodibenzofuran   
-    13                   2,3,4,6,7,8-hexachlorodibenzofuran   
-    14                1,2,3,4,6,7,8-heptachlorodibenzofuran   
-    15                1,2,3,4,7,8,9-heptachlorodibenzofuran   
-    16               1,2,3,4,6,7,8,9-octachlorodibenzofuran   
-    17                                                  NaN   
-    18                                                  NaN   
-    19                                                  NaN   
-    20                                                  NaN   
-    21                                                  NaN   
-    22                                                  NaN   
-    23                                                  NaN   
-    24    1-chloro-2-[2,2-dichloro-1-(4-chlorophenyl)eth...   
-    25    1-chloro-2-[2,2-dichloro-1-(4-chlorophenyl)eth...   
-    26    1-chloro-2-[2,2,2-trichloro-1-(4-chlorophenyl)...   
-    27                                                  NaN   
-    28    1-chloro-4-[2,2-dichloro-1-(4-chlorophenyl)eth...   
-    29    1-chloro-4-[2,2-dichloro-1-(4-chlorophenyl)eth...   
-    ...                                                 ...   
-    1026  (E)-1-N'-[(6-chloropyridin-3-yl)methyl]-1-N'-e...   
-    1027  [3-[(6-chloropyridin-3-yl)methyl]-1,3-thiazoli...   
-    1028  (NE)-N-[3-[(2-chloro-1,3-thiazol-5-yl)methyl]-...   
-    1029  N-[(6-chloropyridin-3-yl)methyl]-N-ethylformamide   
-    1030  1-[(6-chloropyridin-3-yl)methyl]-4,5-dihydroim...   
-    1031  N'-[(6-chloropyridin-3-yl)methyl]-N-cyanoethan...   
-    1032  (Z)-[3-[(6-chloropyridin-3-yl)methyl]-1,3-thia...   
-    1033  5-amino-1-[2,6-dichloro-4-(trifluoromethyl)phe...   
-    1034  2-bromo-3,3-dimethyl-N-(2-phenylpropan-2-yl)bu...   
-    1035              2-amino-3-chloronaphthalene-1,4-dione   
-    1036  2-chloro-N-(2,6-diethylphenyl)-N-(2-propoxyeth...   
-    1037  2-chloro-N-(2,6-dimethylphenyl)-N-[(3-methoxyt...   
-    1038  2-(1,3-benzothiazol-2-yloxy)-N-methyl-N-phenyl...   
-    1039  2-tert-butylimino-5-phenyl-3-propan-2-yl-1,3,5...   
-    1040             (2-butan-2-ylphenyl) N-methylcarbamate   
-    1041  (4-ethoxyphenyl)-[3-(4-fluoro-3-phenoxyphenyl)...   
-    1042                                oxiran-2-ylmethanol   
-    1043                                        pentanedial   
-    1044                             2-methoxyethyl acetate   
-    1045                        2,4-dichloro-1-nitrobenzene   
-    1046                        N-cyclohexylcyclohexanamine   
-    1047                                 2,4-dinitroaniline   
-    1048                          (methyldisulfanyl)methane   
-    1049                                    naphthalen-1-ol   
-    1050                                    naphthalen-2-ol   
-    1051                                  2-ethenylpyridine   
-    1052                               4-ethenylcyclohexene   
-    1053                                           pyridine   
-    1054                                   3-methylpyridine   
-    1055                           dibutyl phenyl phosphate   
-    
+   
                                                    Synonyms    PubChem  \
     0     2,3,7,8-Tetrachlorodibenzo-p-dioxin, TCDD, Dioxin      15625   
     1          1,2,3,7,8-pentachlorodibenzo-p-dioxin, PeCDD      38439   
@@ -185,61 +75,6 @@ print(chemtheatre)
     3                1,2,3,6,7,8-hexachlorodibenzo-p-dioxin      42540   
     4                   1,2,3,7,8,9-Hexachlorodibenzodioxin      29575   
     5             1,2,3,4,6,7,8-heptachlorodibenzo-p-dioxin      37270   
-    6                      octachlorodibenzo-4-dioxin; OCDD      18636   
-    7                       2,3,7,8-TetraCDF; 2,3,7,8-TeCDF      39929   
-    8                                       1,2,3,7,8-PCDBF      42138   
-    9                     2,3,4,7,8-pentachlorodibenzofuran      42128   
-    10                1,2,3,4,7,8-HexaCDF; 1,2,3,4,7,8-HCDB      51130   
-    11    1,2,3,6,7,8-HexaCDF; 1,2,3,6,7,8-HEXACHLORODIB...      42140   
-    12    1,2,3,7,8,9-HexaCDF; 1,2,3,7,8,9-HEXACHLORODIB...      51720   
-    13    2,3,4,6,7,8-HexaCDF; 2,3,4,6,7,8-HEXACHLORODIB...      43495   
-    14    1,2,3,4,6,7,8-HeptaCDF; 1,2,3,4,6,7,8-heptachl...      38199   
-    15    1,2,3,4,7,8,9-HeptaCDF; 1,2,3,4,7,8,9-HEPTACHL...      41510   
-    16                         octachlorodibenzofuran; OCDF      38200   
-    17                                                  NaN        NaN   
-    18                                                  NaN        NaN   
-    19                                                  NaN        NaN   
-    20                                                  NaN        NaN   
-    21                                                  NaN        NaN   
-    22                                                  NaN        NaN   
-    23                                                  NaN        NaN   
-    24    2,2-(2-chlorophenyl-4'-chlorophenyl)-1,1-dichl...     246598   
-    25                                             Mitotane       4211   
-    26    1,1,1-trichloro-2-(2-chlorophenyl)-2-(4-chloro...      13089   
-    27                                                  NaN        NaN   
-    28         1,1-dichloro-2,2-bis(p-chlorophenyl)ethylene       3035   
-    29                       Dichlorodiphenyldichloroethane       6294   
-    ...                                                 ...        ...   
-    1026  Niterndipoine; Bestguard; (E)-Nitenpyram; (1E)...    3034287   
-    1027  Calypso; (3-((6-Chloro-3-pyridinyl)methyl)-2-t...     115224   
-    1028  3-(2-Chloro-thiazol-5-ylmethyl)-5-methyl-(1,3,...    5821911   
-    1029  N-(6-Chloro-3-pyridylmethyl)-N-ethylformamide;...  101942083   
-    1030  desnitroimidacloprid; 1-(6-chloro-pyridin-3-yl...   10130527   
-    1031  N-demethyl acetamiprid; N-Desmethylacetamiprid...   11344811   
-    1032  thiacloprid amide; Urea, N-[3-[(6-chloro-3-pyr...   16212161   
-    1033         fipronil; Termidor; Fluocyanobenpyrazole;        3352   
-    1034  bromobutide; (RS)-2-bromo-N-(alpha,alpha-dimet...      53079   
-    1035  2-Amino-3-chloro-1,4-naphthoquinone; Quinoclam...      17748   
-    1036  Solnet; pretilachlor; Acetamide, 2-chloro-N-(2...      91644   
-    1037  Alherb; Acetamide, 2-chloro-N-(2,6-dimethylphe...     443036   
-    1038  2-(2-benzothiazolyl-oxy)-N-methyl-N-phenylacet...      91716   
-    1039  Applaud; buprofezin; 2-tert-butylimino-3-isopr...      50367   
-    1040  BPMC; 2-(1-methylpropyl)phenyl methylcarbamate...      19588   
-    1041  silafluofen; Benzene, 4-[3-[(4-ethoxyphenyl)di...      92430   
-    1042  2-Oxiranemethanol; Glycidol; oxiran-2-ylmethan...      11164   
-    1043  Pentanedial; glutaraldehyde; Glutaral; Glutari...       3485   
-    1044  ethylene glycol monomethyl ether acetate; 2-me...       8054   
-    1045  2,4-dichloro-1-nitro-benzen; 2,4-DICHLORONITRO...      11899   
-    1046  N,N-Dicyclohexylamine; DCHA; Cyclohexanamine, ...       7582   
-    1047  2,4-DINITROANILINE; Benzenamine, 2,4-dinitro-;...       7321   
-    1048  Dimethyl disulfide; METHYL DISULFIDE; Dimethyl...      12232   
-    1049  1-NAPHTHOL; naphthalen-1-ol; alpha-naphthol; α...       7005   
-    1050  2-hydroxynaphthalene; 2-naphthol; beta-naphtho...       8663   
-    1051  2-Ethenylpyridine; Pyridine, 2-ethenyl-; 2-Pyr...       7521   
-    1052  4-Vinylcyclohexene; Cyclohexene, 4-ethenyl-; 4...       7499   
-    1053  PYRIDINE; Azabenzene; Azine; Pyridin; monopyri...       1049   
-    1054  3-METHYLPYRIDINE; 3-Picoline; beta-Picoline; P...       7970   
-    1055  dibutylphenylphosphate; Phosphoric acid, dibut...      17312   
     
                    CAS  NIST Remarks RegisterDate  UpdateDate  
     0        1746-01-6   NaN     NaN    2016/8/18   2016/8/26  
@@ -248,63 +83,6 @@ print(chemtheatre)
     3       57653-85-7   NaN     NaN    2016/8/18   2016/8/26  
     4       19408-74-3   NaN     NaN    2016/8/18   2016/8/26  
     5       35822-46-9   NaN     NaN    2016/8/18   2016/8/26  
-    6        3268-87-9   NaN     NaN   2016/08/18  2016/08/26  
-    7       51207-31-9   NaN     NaN   2016/08/18  2016/08/26  
-    8       57117-41-6   NaN     NaN    2016/8/18   2016/8/26  
-    9       57117-31-4   NaN     NaN    2016/8/18   2016/8/26  
-    10      70648-26-9   NaN     NaN   2016/08/18  2016/08/26  
-    11      57117-44-9   NaN     NaN   2016/08/18  2016/08/26  
-    12      72918-21-9   NaN     NaN   2016/08/18  2016/08/26  
-    13      60851-34-5   NaN     NaN   2016/08/18  2016/08/26  
-    14      67562-39-4   NaN     NaN   2016/08/18  2016/08/26  
-    15      55673-89-7   NaN     NaN   2016/08/18  2016/08/26  
-    16      39001-02-0   NaN     NaN   2016/08/18  2016/08/26  
-    17             NaN   NaN     NaN    2016/8/18   2016/8/26  
-    18             NaN   NaN     NaN    2016/8/18   2016/8/26  
-    19             NaN   NaN     NaN    2016/8/18   2016/8/26  
-    20             NaN   NaN     NaN    2016/8/18   2016/8/26  
-    21             NaN   NaN     NaN    2016/8/18   2016/8/26  
-    22             NaN   NaN     NaN    2016/8/18   2016/8/26  
-    23             NaN   NaN     NaN    2016/8/18   2016/8/26  
-    24       3424-82-6   NaN     NaN     2016/7/5    2016/7/5  
-    25         53-19-0   NaN     NaN     2016/7/5    2016/7/5  
-    26        789-02-6   NaN     NaN     2016/7/5    2016/7/5  
-    27             NaN   NaN     NaN     2016/7/5    2016/7/5  
-    28         72-55-9   NaN     NaN     2016/7/5    2016/7/5  
-    29         72-54-8   NaN     NaN     2016/7/5    2016/7/5  
-    ...            ...   ...     ...          ...         ...  
-    1026   150824-47-8   NaN     NaN    2019/6/24   2019/6/24  
-    1027   111988-49-9   NaN     NaN    2019/6/24   2019/6/24  
-    1028   153719-23-4   NaN     NaN    2019/6/24   2019/6/24  
-    1029           NaN   NaN     NaN    2019/6/24   2019/6/24  
-    1030   115970-17-7   NaN     NaN    2019/6/24   2019/6/24  
-    1031   190604-92-3   NaN     NaN    2019/6/24   2019/6/24  
-    1032   676228-91-4   NaN     NaN    2019/6/24   2019/6/24  
-    1033   120068-37-3   NaN     NaN    2019/6/24   2019/6/24  
-    1034    74712-19-9   NaN     NaN    2019/6/26   2019/6/26  
-    1035     2797-51-5   NaN     NaN    2019/6/26   2019/6/26  
-    1036    51218-49-6   NaN     NaN    2019/6/26   2019/6/26  
-    1037    96491-05-3   NaN     NaN    2019/6/26   2019/6/26  
-    1038    73250-68-7   NaN     NaN   2019/06/26  2019/06/26  
-    1039    69327-76-0   NaN     NaN   2019/07/09  2019/07/09  
-    1040     3766-81-2   NaN     NaN     2019/9/2    2019/9/2  
-    1041   105024-66-6   NaN     NaN     2019/9/2    2019/9/2  
-    1042      556-52-5   NaN     NaN    2019/9/13   2019/9/13  
-    1043      111-30-8   NaN     NaN    2019/9/13   2019/9/13  
-    1044      110-49-6   NaN     NaN    2019/9/13   2019/9/13  
-    1045      611-06-3   NaN     NaN    2019/9/13   2019/9/13  
-    1046      101-83-7   NaN     NaN    2019/9/13   2019/9/13  
-    1047       97-02-9   NaN     NaN   2019/09/13  2019/09/13  
-    1048      624-92-0   NaN     NaN    2019/9/13   2019/9/13  
-    1049       90-15-3   NaN     NaN    2019/9/13   2019/9/13  
-    1050      135-19-3   NaN     NaN    2019/9/13   2019/9/13  
-    1051      100-69-6   NaN     NaN    2019/9/13   2019/9/13  
-    1052      100-40-3   NaN     NaN    2019/9/13   2019/9/13  
-    1053      110-86-1   NaN     NaN    2019/9/13   2019/9/13  
-    1054      108-99-6   NaN     NaN    2019/9/13   2019/9/13  
-    1055     2528-36-1   NaN     NaN    2019/9/13   2019/9/13  
-    
-    [1056 rows x 11 columns]
 
 CAS RNで揃えて（on='CAS'），ChemTHEATREのテーブルをベースに（how='left'）2つのテーブルをマージする。
 

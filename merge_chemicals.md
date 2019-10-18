@@ -6,7 +6,7 @@ import pandas as pd
 from pandas import DataFrame
 ```
 
-
+Webkis-plusの化学物質テーブルを読み込む。
 ```python
 webkis = pd.read_table('webkis_chemicals.txt')
 ```

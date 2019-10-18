@@ -6,6 +6,7 @@ import pandas as pd
 from pandas import DataFrame
 ```
 
+Webkis-plusのChemicalsテーブルを読み込む。
 
 ```python
 webkis = pd.read_table('webkis_chemicals.txt')
@@ -16,23 +17,6 @@ webkis = pd.read_table('webkis_chemicals.txt')
 webkis[0:5]
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">

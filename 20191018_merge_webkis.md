@@ -74,34 +74,16 @@ webkis[0:5]
 </div>
 
 
-
+ChemTHEATREのChemicalsテーブルを読み込む。この時，PubChemのカラムはデータ型を文字型にしておく。PubChemIDは整数だが，IDが付かないレコードがあり，それらは欠損値NaNとして扱われる。NaNは浮動小数点型（float）として認識されるので，整数型には変換できず，PubChemIDにも小数点が付いてしまう。
 
 ```python
 chemtheatre = pd.read_table('chemtheatre_chemicals.tsv', dtype = {'PubChem':str})
 ```
 
-
 ```python
 chemtheatre[0:5]
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -194,31 +176,13 @@ chemtheatre[0:5]
 </table>
 </div>
 
-
-
+CASを参照して（on='CAS'），ChemTHEATREのテーブルに合わせるように（how='left'），2つのテーブルをマージする。
 
 ```python
 chemicals_merged = pd.merge(chemtheatre, webkis, on='CAS', how='left')
 chemicals_merged[0:5]
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -335,8 +299,7 @@ chemicals_merged[0:5]
 </table>
 </div>
 
-
-
+Webkis-plusのリンク先URLをHTMLタグに書き換える。
 
 ```python
 link = '<a href ="'+chemicals_merged['URL']+'">Link to Webkis-plus</a>;'
@@ -344,23 +307,6 @@ chemicals_merged['Remarks'] = link
 chemicals_merged[0:5]
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -477,8 +423,8 @@ chemicals_merged[0:5]
 </table>
 </div>
 
-
-
+ChemTHEATREのchemicalsテーブルに必要な列だけを抽出して，
+タブ区切りファイル（sep='\t'）として書き出す。この時，行番号は不要なので表示させない（index=False）。
 
 ```python
 chemicals_upload = chemicals_merged.iloc[:, 0:11]

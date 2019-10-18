@@ -23,62 +23,7 @@ print(webkis)
     3    BNS01011   28804-88-8                                          ジメチルナフタレン   
     4    BNS01066   22967-92-6                                                NaN   
     5    BNS01472    7439-89-6                                                  鉄   
-    6    BNS01473    7440-70-2                                              カルシウム   
-    7    BNS01503   62470-53-5                           １，３，７，９−テトラクロロジベンゾダイオキシン   
-    8    BNS01504   50585-46-1                           １，３，７，８−テトラクロロジベンゾダイオキシン   
-    9    BNS01505   62470-54-6                           １，２，８，９−テトラクロロジベンゾダイオキシン   
-    10   BNS01506   58802-20-3                              １，２，７，８−テトラクロロジベンゾフラン   
-    11   BNS01512    7421-93-4                                    Ｅｎｄｒｉｎ　ａｌｄｅｈｙｄｅ   
-    12   BNS01576   53494-70-5                                      Ｅｎｄｒｉｎ　ｋｅｔｏｎｅ   
-    13   BNS01697   52434-90-9                              トリス（ジブロモプロピル）イソシアヌレート   
-    14   BNS01856     481-97-0                                         エストロン−３−硫酸   
-    15   BNS01859      50-27-1                                            エストリオール   
-    16   BNS01946   41318-75-6  ２，４，４’−トリブロモジフェニルエーテル；２，４，４’−三臭素化ジフェニルエーテル；ＰＢＤ...   
-    17   BNS02244    4901-51-3                                                NaN   
-    18   BNS02245     935-95-5                                                NaN   
-    19   BNS02266  152969-11-4                    ４−ヒドロキシ−２，３，３’，４’，５−ペンタクロロビフェニル   
-    20   BNS02272  158076-69-8              ３−ヒドロキシ−２，２’，３’，４，４’，５，５’−ヘプタクロロビフェニル   
-    21   BNS02274  158076-68-7               ４−ヒドロキシ−２，２’，３，４’，５，５’，６−ヘプタクロロビフェニル   
-    22   BNS02369   83905-01-5                                           アジスロマイシン   
-    23   BNS02426  189084-66-0                        ２，３’，４，４’，６−ペンタブロモジフェニルエーテル   
-    24   BNS02427  366791-32-4                        ３，３’，４，４’，５−ペンタブロモジフェニルエーテル   
-    25   BNS02511      79-77-6                                         （Ｅ）−β−イオノン   
-    26   BNS02518   15307-86-5                                            ジクロフェナク   
-    27   BNS02519   79617-96-2                                             セルトラリン   
-    28   BNS02520   61869-08-7                                             パロキセチン   
-    29   BNS02525    7396-58-9                                  Ｎ−メチルジデカン−１−イルアミン   
-    ..        ...          ...                                                ...   
-    372  YOT00237     207-08-9                                      ベンゾ（ｋ）フルオランテン   
-    373  YOT00238     193-39-5                                  インデノ（１，２，３−ｃｄ）ピレン   
-    374  YOT00252    1163-19-5                                     デカブロモジフェニルエーテル   
-    375  YOT00259      79-94-7               ２，２−ビス（４’−ハイドロキシ−３’，５’−ジブロモフェニル）プロパン   
-    376  YOT00269    3380-34-5                     ５−クロロ−２−（２’，４’−ジクロロフェノキシ）フェノール   
-    377  YOT00312     309-00-2  １，２，３，４，１０，１０−ヘキサクロロ−１，４，４ａ，５，８，８ａ−ヘキサヒドロ−エキソ−...   
-    378  YOT00313      72-20-8  １，２，３，４，１０，１０−ヘキサクロロ−６，７−エポキシ−１，４，４ａ，５，６，７，８，８...   
-    379  YOT00314      60-57-1  １，２，３，４，１０，１０−ヘキサクロロ−６，７−エポキシ−１，４，４ａ，５，６，７，８，８...   
-    380  YOT00324      91-20-3                                              ナフタレン   
-    381  YOT00348      75-15-0                                              二硫化炭素   
-    382  YOT00356   37853-59-1                        １，２−ビス（２，４，６−トリプロモフェノキシ）エタン   
-    383  YOT00360     110-86-1                                               ピリジン   
-    384  YOT00369   23184-66-9                                             ブタクロール   
-    385  YOT00371      71-36-3                                            １−ブタノール   
-    386  YOT00372      78-93-3                                             ２−ブタノン   
-    387  YOT00396   51218-49-6             ２−クロロ−２’，６’−ジエチル−Ｎ−（２−プロポキシエチル）アセトアニリド   
-    388  YOT00399      57-55-6                                         プロピレングリコール   
-    389  YOT00414     118-74-1                                         ヘキサクロロベンゼン   
-    390  YOT00428      87-86-5                                            ペンクロロール   
-    391  YOT00429     608-93-5                                         ペンタクロロベンゼン   
-    392  YOT00441      50-00-0                                           ホルムアルデヒド   
-    393  YOT00442    2385-85-5  ドデカクロロペンタシクロ［５．３．０．０（２，６）．０（３，９）．０（４，８）］デカン（別名...   
-    394  YOT00457     108-99-6                                          ３−メチルピリジン   
-    395  YOT00461      72-43-5                                            メトキシクロル   
-    396  YOT00465      96-45-7                                       ２−イミダゾリジンチオン   
-    397  YOT00484    1330-78-5                                          リン酸トリクレジル   
-    398  YOT00486      78-42-2                                  トリス（２−エチルヘキシル）リン酸   
-    399  YOT00487     115-96-8                                   リン酸トリス（２−クロロエチル）   
-    400  YOT00488     115-86-6                                          リン酸トリフェニル   
-    401  YOT00489     126-73-8                                           リン酸トリブチル   
-    
+      
                                                     e_name  \
     0                                 Antimony - Elemental   
     1                                    １７ａｌｐｈａ−ｅｓｔｒａｄｉｏｌ   
@@ -86,61 +31,6 @@ print(webkis)
     3                                  ｄｉｍｅｔｈｙｌｎａｐｈｔｈａｌｅｎｅ   
     4                                        Methylmercury   
     5                                            Ｉｒｏｎ　（Ｆｅ）   
-    6                                              CALCIUM   
-    7                                         １，３，７，９−ＴＣＤＤ   
-    8                                         １，３，７，８−ＴＣＤＤ   
-    9                                         １，２，８，９−ＴＣＤＤ   
-    10                                        １，２，７，８−ＴＣＤＦ   
-    11                                     Ｅｎｄｒｉｎ　ａｌｄｅｈｙｄｅ   
-    12                                       Ｅｎｄｒｉｎ　ｋｅｔｏｎｅ   
-    13                                                 NaN   
-    14                                   ｅｓｔｒｏｎｅ−３−ｓｕｌｆａｔｅ   
-    15                                             Ｅｓｔｒｉｏｌ   
-    16                ２，４，４’−ｔｒｉｂｒｏｍｏｄｉｐｈｅｎｙｌｅｔｈｅｒ；ＰＢＤＥ＃２８   
-    17                           2,3,4,5-tetrachlorophenol   
-    18                           2,3,5,6-tetrachlorophenol   
-    19           ４−Ｈｙｄｒｏｘｙ−２，３，３’，４’，５−ｐｅｎｔａｃｈｌｏｒｏｂｉｐｈｅｎｙｌ   
-    20     ３−Ｈｙｄｒｏｘｙ−２，２’，３’，４，４’，５，５’−ｈｅｐｔａｃｈｌｏｒｏｂｉｐｈｅｎｙｌ   
-    21      ４−Ｈｙｄｒｏｘｙ−２，２’，３，４’，５，５’，６−ｈｅｐｔａｃｈｌｏｒｏｂｉｐｈｅｎｙｌ   
-    22                                        Ａｚｉｔｈｒｏｍｙｃｉｎ   
-    23                ２，３’，４，４’，６−ｐｅｎｔａｂｒｏｍｏｄｉｐｈｅｎｙｌ　ｅｔｈｅｒ   
-    24                ３，３’，４，４’，５−ｐｅｎｔａｂｒｏｍｏｄｉｐｈｅｎｙｌ　ｅｔｈｅｒ   
-    25                                   (E)-.beta.-Ionone   
-    26                                          Ｄｉｃｌｏｆｅｎａｃ   
-    27                                          Ｓｅｒｔｒａｌｉｎｅ   
-    28                                          Ｐａｒｏｘｅｔｉｎｅ   
-    29                          Ｎ−Ｍｅｔｈｙｌｄｉｄｅｃａｎｅ−１−ｙｌａｍｉｎｅ   
-    ..                                                 ...   
-    372                               BENZO(k)FLUORANTHENE   
-    373                             INDENO(1,2,3-cd)PYRENE   
-    374                             DECABROMODIPHENYLETHER   
-    375                              Tetrabromobisphenol A   
-    376         5-Chloro-2-(2', 4'-dichlorophenoxy) phenol   
-    377                                                NaN   
-    378                                                NaN   
-    379                                                NaN   
-    380                                        NAPHTHALENE   
-    381                                    CARBONDISULFIDE   
-    382               1,2-BIS(2,4,6-TRIBROMOPHENOXY)ETHANE   
-    383                                           PYRIDINE   
-    384                                          BUTACHLOR   
-    385                                          1-BUTANOL   
-    386                                         2-BUTANONE   
-    387  2-CHLORO-2',6'-DIETHYL-N-(2-PROPOXYETHYL)ACETA...   
-    388                                    PROPYLENEGLYCOL   
-    389                                                NaN   
-    390                                         PENCHLOROL   
-    391                                PENTACHLOROBENEZENE   
-    392                                       FORMALDEHYDE   
-    393                                                NaN   
-    394                                   3-METHYLPYRIDINE   
-    395                                       METHOXYCHLOR   
-    396                              2-IMIDAZOLIDINETHIONE   
-    397                                 TRICRESYLPHOSPHATE   
-    398                                  TRIOCTYLPHOSPHATE   
-    399                       TRIS(2-CHLOROETHYL)PHOSPHATE   
-    400                                 TRIPHENYLPHOSPHATE   
-    401                                  TRIBUTYLPHOSPHATE   
     
                                                       URL  
     0    https://www.nies.go.jp/kisplus/dtl/chem/ACG00096  
@@ -149,64 +39,7 @@ print(webkis)
     3    https://www.nies.go.jp/kisplus/dtl/chem/BNS01011  
     4    https://www.nies.go.jp/kisplus/dtl/chem/BNS01066  
     5    https://www.nies.go.jp/kisplus/dtl/chem/BNS01472  
-    6    https://www.nies.go.jp/kisplus/dtl/chem/BNS01473  
-    7    https://www.nies.go.jp/kisplus/dtl/chem/BNS01503  
-    8    https://www.nies.go.jp/kisplus/dtl/chem/BNS01504  
-    9    https://www.nies.go.jp/kisplus/dtl/chem/BNS01505  
-    10   https://www.nies.go.jp/kisplus/dtl/chem/BNS01506  
-    11   https://www.nies.go.jp/kisplus/dtl/chem/BNS01512  
-    12   https://www.nies.go.jp/kisplus/dtl/chem/BNS01576  
-    13   https://www.nies.go.jp/kisplus/dtl/chem/BNS01697  
-    14   https://www.nies.go.jp/kisplus/dtl/chem/BNS01856  
-    15   https://www.nies.go.jp/kisplus/dtl/chem/BNS01859  
-    16   https://www.nies.go.jp/kisplus/dtl/chem/BNS01946  
-    17   https://www.nies.go.jp/kisplus/dtl/chem/BNS02244  
-    18   https://www.nies.go.jp/kisplus/dtl/chem/BNS02245  
-    19   https://www.nies.go.jp/kisplus/dtl/chem/BNS02266  
-    20   https://www.nies.go.jp/kisplus/dtl/chem/BNS02272  
-    21   https://www.nies.go.jp/kisplus/dtl/chem/BNS02274  
-    22   https://www.nies.go.jp/kisplus/dtl/chem/BNS02369  
-    23   https://www.nies.go.jp/kisplus/dtl/chem/BNS02426  
-    24   https://www.nies.go.jp/kisplus/dtl/chem/BNS02427  
-    25   https://www.nies.go.jp/kisplus/dtl/chem/BNS02511  
-    26   https://www.nies.go.jp/kisplus/dtl/chem/BNS02518  
-    27   https://www.nies.go.jp/kisplus/dtl/chem/BNS02519  
-    28   https://www.nies.go.jp/kisplus/dtl/chem/BNS02520  
-    29   https://www.nies.go.jp/kisplus/dtl/chem/BNS02525  
-    ..                                                ...  
-    372  https://www.nies.go.jp/kisplus/dtl/chem/YOT00237  
-    373  https://www.nies.go.jp/kisplus/dtl/chem/YOT00238  
-    374  https://www.nies.go.jp/kisplus/dtl/chem/YOT00252  
-    375  https://www.nies.go.jp/kisplus/dtl/chem/YOT00259  
-    376  https://www.nies.go.jp/kisplus/dtl/chem/YOT00269  
-    377  https://www.nies.go.jp/kisplus/dtl/chem/YOT00312  
-    378  https://www.nies.go.jp/kisplus/dtl/chem/YOT00313  
-    379  https://www.nies.go.jp/kisplus/dtl/chem/YOT00314  
-    380  https://www.nies.go.jp/kisplus/dtl/chem/YOT00324  
-    381  https://www.nies.go.jp/kisplus/dtl/chem/YOT00348  
-    382  https://www.nies.go.jp/kisplus/dtl/chem/YOT00356  
-    383  https://www.nies.go.jp/kisplus/dtl/chem/YOT00360  
-    384  https://www.nies.go.jp/kisplus/dtl/chem/YOT00369  
-    385  https://www.nies.go.jp/kisplus/dtl/chem/YOT00371  
-    386  https://www.nies.go.jp/kisplus/dtl/chem/YOT00372  
-    387  https://www.nies.go.jp/kisplus/dtl/chem/YOT00396  
-    388  https://www.nies.go.jp/kisplus/dtl/chem/YOT00399  
-    389  https://www.nies.go.jp/kisplus/dtl/chem/YOT00414  
-    390  https://www.nies.go.jp/kisplus/dtl/chem/YOT00428  
-    391  https://www.nies.go.jp/kisplus/dtl/chem/YOT00429  
-    392  https://www.nies.go.jp/kisplus/dtl/chem/YOT00441  
-    393  https://www.nies.go.jp/kisplus/dtl/chem/YOT00442  
-    394  https://www.nies.go.jp/kisplus/dtl/chem/YOT00457  
-    395  https://www.nies.go.jp/kisplus/dtl/chem/YOT00461  
-    396  https://www.nies.go.jp/kisplus/dtl/chem/YOT00465  
-    397  https://www.nies.go.jp/kisplus/dtl/chem/YOT00484  
-    398  https://www.nies.go.jp/kisplus/dtl/chem/YOT00486  
-    399  https://www.nies.go.jp/kisplus/dtl/chem/YOT00487  
-    400  https://www.nies.go.jp/kisplus/dtl/chem/YOT00488  
-    401  https://www.nies.go.jp/kisplus/dtl/chem/YOT00489  
-    
-    [402 rows x 5 columns]
-
+   
 ChemTHEATREのchemicalsテーブルを読み込む。
 この時，PubChemのカラムだけ，データ型を文字型にしておく。PubChemIDは整数だが，PubChemIDが付かないレコードがあり，欠損値NaNとして表示される。NaNは浮動小数点型（float）として認識されるので，データ型を整数型には出来ない。
 

@@ -1,0 +1,206 @@
+{
+  "groups": [
+    {
+      "id": "CG0001",
+      "name": "Organochlorines"
+    },
+    {
+      "id": "CG0018",
+      "name": "Flame retardants"
+    },
+    {
+      "id": "CG0028",
+      "name": "Perfluoroalkyl and polyfluoroalkyl substances"
+    },
+    {
+      "id": "CG0032",
+      "name": "PAHs"
+    },
+    {
+      "id": "CG0041",
+      "name": "Alkanes"
+    },
+    {
+      "id": "CG0044",
+      "name": "Pesticides"
+    },
+    {
+      "id": "CG0120",
+      "name": "Herbicides"
+    },
+    {
+      "id": "CG0122",
+      "name": "Fungicides"
+    },
+    {
+      "id": "CG0061",
+      "name": "PPCPs"
+    },
+    {
+      "id": "CG0072",
+      "name": "Phenols"
+    },
+    {
+      "id": "CG0076",
+      "name": "Phthalic acid"
+    },
+    {
+      "id": "CG0080",
+      "name": "Metals/Elements"
+    },
+    {
+      "id": "CG0095",
+      "name": "Hormones/Biogenic compounds"
+    },
+    {
+      "id": "CG0104",
+      "name": "Nutrients"
+    },
+    {
+      "id": "CG0107",
+      "name": "Siloxane"
+    },
+    {
+      "id": "CG0108",
+      "name": "Oxoacids"
+    },
+    {
+      "id": "CG0109",
+      "name": "Halo-acetic acids"
+    },
+    {
+      "id": "CG0110",
+      "name": "VOCs"
+    },
+    {
+      "id": "CG0111",
+      "name": "Carbons"
+    },
+    {
+      "id": "CG0112",
+      "name": "Stable isotope"
+    },
+    {
+      "id": "CG0113",
+      "name": "Radioactive isotope"
+    },
+    {
+      "id": "CG0114",
+      "name": "Solvents/Diluents/Resin and raw materials"
+    },
+    {
+      "id": "CG0115",
+      "name": "Dyes/Pigments/Perfumes/Medicines and raw materials"
+    },
+    {
+      "id": "CG0069",
+      "name": "Ultraviolet absorbing agents"
+    },
+    {
+      "id": "CG0121",
+      "name": "FAMEs"
+    },
+    {
+      "id": "CG0116",
+      "name": "Others"
+    }
+  ],
+  "filemap": {
+    "CG0001": {
+      "file": "data/index/CG0001.json",
+      "count": 71634
+    },
+    "CG0018": {
+      "file": "data/index/CG0018.json",
+      "count": 28325
+    },
+    "CG0028": {
+      "file": "data/index/CG0028.json",
+      "count": 6757
+    },
+    "CG0032": {
+      "file": "data/index/CG0032.json",
+      "count": 14958
+    },
+    "CG0041": {
+      "file": "data/index/CG0041.json",
+      "count": 3376
+    },
+    "CG0044": {
+      "file": "data/index/CG0044.json",
+      "count": 5097
+    },
+    "CG0061": {
+      "file": "data/index/CG0061.json",
+      "count": 20258
+    },
+    "CG0069": {
+      "file": "data/index/CG0069.json",
+      "count": 840
+    },
+    "CG0072": {
+      "file": "data/index/CG0072.json",
+      "count": 5194
+    },
+    "CG0076": {
+      "file": "data/index/CG0076.json",
+      "count": 1126
+    },
+    "CG0080": {
+      "file": "data/index/CG0080.json",
+      "count": 4947
+    },
+    "CG0095": {
+      "file": "data/index/CG0095.json",
+      "count": 1109
+    },
+    "CG0107": {
+      "file": "data/index/CG0107.json",
+      "count": 589
+    },
+    "CG0110": {
+      "file": "data/index/CG0110.json",
+      "count": 9
+    },
+    "CG0111": {
+      "file": "data/index/CG0111.json",
+      "count": 217
+    },
+    "CG0112": {
+      "file": "data/index/CG0112.json",
+      "count": 218
+    },
+    "CG0113": {
+      "file": "data/index/CG0113.json",
+      "count": 44
+    },
+    "CG0114": {
+      "file": "data/index/CG0114.json",
+      "count": 1986
+    },
+    "CG0115": {
+      "file": "data/index/CG0115.json",
+      "count": 2031
+    },
+    "CG0116": {
+      "file": "data/index/CG0116.json",
+      "count": 1604
+    },
+    "CG0120": {
+      "file": "data/index/CG0120.json",
+      "count": 2749
+    },
+    "CG0121": {
+      "file": "data/index/CG0121.json",
+      "count": 463
+    },
+    "CG0122": {
+      "file": "data/index/CG0122.json",
+      "count": 1610
+    },
+    "UNKNOWN": {
+      "file": "data/index/UNKNOWN.json",
+      "count": 4291
+    }
+  }
+}

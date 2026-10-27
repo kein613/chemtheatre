@@ -577,39 +577,70 @@ function renderTable(records) {
 
 // ── モーダル ──
 async function showDetail(mid, pid, updateHash = true) {
-  const rec  = (filtered.length ? filtered : currentRaw).find(r => r.mid === mid);
-  if (updateHash && rec) history.pushState(null, '', '#sample/' + rec.sid);
+  const rec = (filtered.length ? filtered : currentRaw).find(r => r.mid === mid);
+  if (!rec) return;
+  if (updateHash) history.pushState(null, '', '#sample/' + rec.sid);
+  await showSampleModal(rec.sid, rec.pid);
+}
+
+async function showSampleModal(sid, pid) {
+  // サンプルに紐づく全測定値を収集（currentRaw + 必要なら別グループもロード）
+  const allRecs = currentRaw.filter(r => r.sid === sid);
 
   const proj = await fetchJson(`data/detail/${pid}.json`).catch(() => projects[pid] || {});
   const doi  = proj.doi ? `<a href="https://doi.org/${proj.doi}" target="_blank">${proj.doi}</a>` : '—';
 
-  const st   = stMap[rec?.stype] || {};
-  const loc  = [rec?.country, rec?.region].filter(Boolean).join(', ') || '—';
-  const val  = rec?.value != null ? `${rec.value} ${rec.unit||''}` : (rec?.altData||'—');
+  const rep  = allRecs[0] || {};
+  const st   = stMap[rep.stype] || {};
+  const loc  = [rep.country, rep.region].filter(Boolean).join(', ') || '—';
   const stypeLabel = [st.type1, st.type2, st.type3, st.type4].filter(Boolean).join(' > ') || '—';
 
+  // 測定値テーブル
+  const valueRows = allRecs.map(r => {
+    const val = r.value != null ? `${r.value} ${r.unit||''}` : (r.altData||'—');
+    return `<tr>
+      <td>${r.cname||'—'}</td>
+      <td style="color:var(--muted);font-size:.78em">${r.cas||'—'}</td>
+      <td style="font-family:monospace;text-align:right">${val}</td>
+    </tr>`;
+  }).join('');
+
   document.getElementById('modal-content').innerHTML = `
-    <h2>${proj.title||'Project detail'}
-      ${rec ? `<button onclick="copySampleUrl('${rec.sid}',event)" title="Copy link"
+    <h2>Sample: ${sid}
+      <button onclick="copySampleUrl('${sid}',event)" title="Copy link"
         style="float:right;margin-left:.5rem;background:none;border:1px solid var(--border);
-        border-radius:5px;padding:.15rem .5rem;cursor:pointer;font-size:.75rem;color:var(--muted)">🔗</button>` : ''}
+        border-radius:5px;padding:.15rem .5rem;cursor:pointer;font-size:.75rem;color:var(--muted)">🔗</button>
     </h2>
+    <div class="modal-grid">
+      <div class="modal-section"><label>Sample type</label><p>${stypeLabel}</p></div>
+      <div class="modal-section"><label>Species</label><p>${rep.species||rep.common||'—'}</p></div>
+      <div class="modal-section"><label>Location</label><p>${loc}</p></div>
+      <div class="modal-section"><label>Year</label><p>${rep.year||'—'}</p></div>
+      ${rep.tissue ? `<div class="modal-section"><label>Tissue</label><p>${rep.tissue}</p></div>` : ''}
+      ${rep.sex    ? `<div class="modal-section"><label>Sex</label><p>${rep.sex}</p></div>` : ''}
+    </div>
+    <hr class="modal-divider">
+    <div class="modal-section"><label>Measured values (${allRecs.length})</label>
+      <div style="overflow-x:auto;margin-top:.5rem">
+        <table style="width:100%;border-collapse:collapse;font-size:.82rem">
+          <thead style="background:var(--bg)">
+            <tr>
+              <th style="padding:.4rem .6rem;text-align:left;font-size:.7rem;color:var(--muted);text-transform:uppercase">Chemical</th>
+              <th style="padding:.4rem .6rem;text-align:left;font-size:.7rem;color:var(--muted);text-transform:uppercase">CAS</th>
+              <th style="padding:.4rem .6rem;text-align:right;font-size:.7rem;color:var(--muted);text-transform:uppercase">Value</th>
+            </tr>
+          </thead>
+          <tbody>${valueRows}</tbody>
+        </table>
+      </div>
+    </div>
+    <hr class="modal-divider">
+    <h3 style="font-size:.85rem;font-weight:600;margin-bottom:.8rem">${proj.title||'—'}</h3>
     <div class="modal-grid">
       <div class="modal-section"><label>Author</label><p>${proj.author||'—'}</p></div>
       <div class="modal-section"><label>Affiliation</label><p>${proj.affiliation||'—'}</p></div>
       <div class="modal-section"><label>Release date</label><p>${proj.releaseDate||'—'}</p></div>
       <div class="modal-section"><label>DOI</label><p>${doi}</p></div>
-    </div>
-    <hr class="modal-divider">
-    <div class="modal-grid">
-      <div class="modal-section"><label>Chemical</label><p>${rec?.cname||'—'}${rec?.cas?' ('+rec.cas+')':''}</p></div>
-      <div class="modal-section"><label>Sample type</label><p>${stypeLabel}</p></div>
-      <div class="modal-section"><label>Species</label><p>${rec?.species||rec?.common||'—'}</p></div>
-      <div class="modal-section"><label>Tissue</label><p>${rec?.tissue||'—'}</p></div>
-      <div class="modal-section"><label>Location</label><p>${loc}</p></div>
-      <div class="modal-section"><label>Year</label><p>${rec?.year||'—'}</p></div>
-      <div class="modal-section"><label>Measured value</label><p style="font-family:monospace">${val}</p></div>
-      <div class="modal-section"><label>Sex</label><p>${rec?.sex||'—'}</p></div>
     </div>
     ${proj.abstract ? `<div class="modal-section"><label>Abstract</label><p>${proj.abstract}</p></div>` : ''}
     ${proj.grant    ? `<div class="modal-section"><label>Grant</label><p style="font-size:.8em">${proj.grant}</p></div>` : ''}
@@ -662,7 +693,7 @@ async function openBySampleId(sid) {
     filtered = currentRaw;
   }
   const rec = currentRaw.find(r => r.sid === sid);
-  if (rec) await showDetail(rec.mid, rec.pid, false);
+  if (rec) await showSampleModal(sid, rec.pid);
 }
 function checkHash() {
   const sid = parseSampleHash();

@@ -231,7 +231,14 @@ function makeNode(node, depth) {
   const isRoot = (node.id === rootId);
   const hasSummary = isRoot && meta.summarymap && meta.summarymap[node.id];
   const hasFull    = meta.filemap && meta.filemap[node.id];
-  const dataExists = hasSummary || hasFull;
+
+  // 子孫にデータがあるか確認
+  function hasDescendantData(n) {
+    if (meta.filemap && meta.filemap[n.id]) return true;
+    if (meta.summarymap && meta.summarymap[n.id]) return true;
+    return (n.children || []).some(c => hasDescendantData(c));
+  }
+  const dataExists = hasSummary || hasFull || hasDescendantData(node);
 
   const wrap = document.createElement('div');
   wrap.className = `tree-item depth-${depth}`;

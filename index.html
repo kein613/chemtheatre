@@ -583,9 +583,10 @@ async function showDetail(mid, pid, updateHash = true) {
   await showSampleModal(rec.sid, rec.pid);
 }
 
-async function showSampleModal(sid, pid) {
-  // サンプルに紐づく全測定値を収集（currentRaw + 必要なら別グループもロード）
-  const allRecs = currentRaw.filter(r => r.sid === sid);
+async function showSampleModal(sid, pid, extraData) {
+  // サンプルに紐づく全測定値を収集
+  const base = extraData || currentRaw;
+  const allRecs = base.filter(r => r.sid === sid);
 
   const proj = await fetchJson(`data/detail/${pid}.json`).catch(() => projects[pid] || {});
   const doi  = proj.doi ? `<a href="https://doi.org/${proj.doi}" target="_blank">${proj.doi}</a>` : '—';
@@ -679,21 +680,25 @@ window.addEventListener('hashchange', () => {
 });
 async function openBySampleId(sid) {
   const sampleIndex = await fetchJson('data/sample_index.json').catch(() => ({}));
-  const subGid = sampleIndex[sid];
-  if (!subGid) return;
-  const rootId = meta.groupToRoot[subGid] || subGid;
-  if (activeRootId !== rootId) {
-    if (meta.filemap[subGid]) {
-      currentRaw   = await fetchJson(meta.filemap[subGid].file);
-    } else if (meta.summarymap[rootId]) {
-      currentRaw   = await fetchJson(meta.summarymap[rootId].file);
-    }
-    activeRootId  = rootId;
-    activeGroupId = subGid;
-    filtered = currentRaw;
+  const subGids = sampleIndex[sid];
+  if (!subGids || !subGids.length) return;
+
+  // 全グループのJSONをロードして合算
+  const arrays = await Promise.all(
+    subGids
+      .filter(gid => meta.filemap && meta.filemap[gid])
+      .map(gid => fetchJson(meta.filemap[gid].file).catch(() => []))
+  );
+  const allData = arrays.flat();
+
+  // currentRawに追加（重複しないように）
+  const existingSids = new Set(currentRaw.map(r => r.sid));
+  if (!existingSids.has(sid)) {
+    currentRaw = currentRaw.concat(allData.filter(r => r.sid === sid));
   }
-  const rec = currentRaw.find(r => r.sid === sid);
-  if (rec) await showSampleModal(sid, rec.pid);
+
+  const rec = allData.find(r => r.sid === sid) || currentRaw.find(r => r.sid === sid);
+  if (rec) await showSampleModal(sid, rec.pid, allData);
 }
 function checkHash() {
   const sid = parseSampleHash();

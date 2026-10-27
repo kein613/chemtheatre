@@ -278,52 +278,60 @@ async function selectGroup(node, rowEl, rootId, isRoot) {
   const hasSummary = isRoot && meta.summarymap && meta.summarymap[node.id];
   const hasFull    = meta.filemap && meta.filemap[node.id];
 
-  if (!hasSummary && !hasFull) {
-    // 子を持つが自分はデータなし → サブ選択を促す
-    document.getElementById('table-area').innerHTML =
-      '<div class="no-data">Select a sub-group to view data.</div>';
-    updateBreadcrumb(node, rootId, isRoot, null);
-    return;
-  }
+  // 子孫グループのIDセットを収集
+  const descendants = collectDescendants(node);
+
+  // 子孫のうちフルJSONを持つもの
+  const subIds = [...descendants].filter(gid => meta.filemap && meta.filemap[gid]);
 
   if (isRoot && hasSummary) {
     // ルートグループ → 要約版
     isSummaryMode = true;
     activeFilter  = null;
     updateBreadcrumb(node, rootId, isRoot, 'summary');
-    if (activeRootId !== rootId) {
+    if (activeRootId !== rootId || activeGroupId !== rootId) {
       showLoading();
-      currentRaw   = await fetchJson(meta.summarymap[rootId].file);
-      activeRootId = rootId;
+      currentRaw    = await fetchJson(meta.summarymap[rootId].file);
+      activeRootId  = rootId;
       activeGroupId = rootId;
       buildYearFilter();
     }
-  } else {
-    // サブグループ → フル版
+  } else if (hasFull) {
+    // 直接フルJSONを持つサブグループ
     isSummaryMode  = false;
-    activeFilter   = collectDescendants(node);
+    activeFilter   = null;
     updateBreadcrumb(node, rootId, isRoot, 'full');
-
-    // ルートのデータが変わる場合だけロード
-    if (activeRootId !== rootId || activeGroupId === rootId) {
-      showLoading();
-      // サブグループのフルJSONを直接ロード
-      if (hasFull) {
-        currentRaw   = await fetchJson(meta.filemap[node.id].file);
-        activeGroupId = node.id;
-        activeRootId  = rootId;
-      } else {
-        // フルJSONがない（中間グループ）→ ルート要約から絞り込み
-        if (activeRootId !== rootId) {
-          currentRaw   = await fetchJson(meta.summarymap[rootId].file);
-          activeRootId = rootId;
-        }
-        activeGroupId = node.id;
-      }
-      buildYearFilter();
-    } else {
-      activeGroupId = node.id;
-    }
+    showLoading();
+    currentRaw    = await fetchJson(meta.filemap[node.id].file);
+    activeRootId  = rootId;
+    activeGroupId = node.id;
+    buildYearFilter();
+  } else if (subIds.length > 0) {
+    // 中間グループ → 子孫のフルJSONを全部ロードして合算
+    isSummaryMode  = false;
+    activeFilter   = null;
+    updateBreadcrumb(node, rootId, isRoot, 'full');
+    showLoading();
+    const arrays = await Promise.all(subIds.map(gid => fetchJson(meta.filemap[gid].file)));
+    currentRaw    = arrays.flat();
+    activeRootId  = rootId;
+    activeGroupId = node.id;
+    buildYearFilter();
+  } else if (hasSummary) {
+    // summaryしかない場合
+    isSummaryMode = true;
+    activeFilter  = null;
+    updateBreadcrumb(node, rootId, isRoot, 'summary');
+    showLoading();
+    currentRaw    = await fetchJson(meta.summarymap[node.id].file);
+    activeRootId  = rootId;
+    activeGroupId = node.id;
+    buildYearFilter();
+  } else {
+    document.getElementById('table-area').innerHTML =
+      '<div class="no-data">No data available for this group.</div>';
+    updateBreadcrumb(node, rootId, isRoot, null);
+    return;
   }
 
   buildType2Filter();

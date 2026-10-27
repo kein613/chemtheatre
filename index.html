@@ -274,6 +274,10 @@ function toggleChildren(wrap, btn) {
 async function selectGroup(node, rowEl, rootId, isRoot) {
   document.querySelectorAll('.tree-row.active').forEach(r => r.classList.remove('active'));
   rowEl.classList.add('active');
+  const setActive = () => {
+    document.querySelectorAll('.tree-row.active').forEach(r => r.classList.remove('active'));
+    rowEl.classList.add('active');
+  };
 
   const hasSummary = isRoot && meta.summarymap && meta.summarymap[node.id];
   const hasFull    = meta.filemap && meta.filemap[node.id];
@@ -290,7 +294,7 @@ async function selectGroup(node, rowEl, rootId, isRoot) {
     activeFilter  = null;
     updateBreadcrumb(node, rootId, isRoot, 'summary');
     if (activeRootId !== rootId || activeGroupId !== rootId) {
-      showLoading();
+      showLoading(); setActive();
       currentRaw    = await fetchJson(meta.summarymap[rootId].file);
       activeRootId  = rootId;
       activeGroupId = rootId;
@@ -301,7 +305,7 @@ async function selectGroup(node, rowEl, rootId, isRoot) {
     isSummaryMode  = false;
     activeFilter   = null;
     updateBreadcrumb(node, rootId, isRoot, 'full');
-    showLoading();
+    showLoading(); setActive();
     currentRaw    = await fetchJson(meta.filemap[node.id].file);
     activeRootId  = rootId;
     activeGroupId = node.id;
@@ -311,7 +315,7 @@ async function selectGroup(node, rowEl, rootId, isRoot) {
     isSummaryMode  = false;
     activeFilter   = null;
     updateBreadcrumb(node, rootId, isRoot, 'full');
-    showLoading();
+    showLoading(); setActive();
     const arrays = await Promise.all(subIds.map(gid => fetchJson(meta.filemap[gid].file)));
     currentRaw    = arrays.flat();
     activeRootId  = rootId;
